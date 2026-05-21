@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>美聯物業 - 搵好樓，上美聯</title>
+  <link rel="stylesheet" href="website.css">
+  <script charset="UTF-8" src="./sensorsdata.min.js"></script>
+  <script charset="UTF-8">
+  var sensors = window['sensorsDataAnalytic201505'];
+  sensors.init({
+    server_url: 'https://westkdemodatasink.sensorsdata.cn/sa?project=Retail',
+    is_track_single_page: true,
+    heatmap: {
+      clickmap: 'default',   
+      scroll_notice_map: 'default'
+    },
+    use_client_time:true,
+    send_type:'beacon',
+    show_log:true
+  });
+  sensors.quick('autoTrack');
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <a href="#" class="logo">🏠 美聯物業</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#second-hand" class="active">二手盤</a></li>
+          <li><a href="#new-property">一手新盤</a></li>
+          <li><a href="#rental">租盤</a></li>
+          <li><a href="#owner">業主專區</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-owner">我係業主</button>
+        <button class="btn-login" id="loginBtn">登入 / 註冊</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="search-section">
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜尋樓盤名稱、地區或關鍵字...">
+        <button id="searchBtn">🔍 搜尋</button>
+      </div>
+    </div>
+    <div class="search-suggestions">
+      <div class="suggestions-dropdown" id="suggestionsDropdown"></div>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <section class="banner-section">
+      <div class="banner-container" id="bannerContainer">
+        <button class="banner-arrow prev" id="bannerPrev">‹</button>
+        <button class="banner-arrow next" id="bannerNext">›</button>
+        <div class="banner-dots" id="bannerDots"></div>
+      </div>
+    </section>
+
+    <section class="property-section" id="second-hand">
+      <div class="section-header"><h2>二手樓盤</h2><a href="#" class="view-all">查看全部 →</a></div>
+      <div class="property-grid" id="secondHandGrid"></div>
+    </section>
+    <section class="property-section" id="new-property">
+      <div class="section-header"><h2>一手新盤</h2><a href="#" class="view-all">查看全部 →</a></div>
+      <div class="property-grid" id="newPropertyGrid"></div>
+    </section>
+    <section class="property-section" id="rental">
+      <div class="section-header"><h2>租盤精選</h2><a href="#" class="view-all">查看全部 →</a></div>
+      <div class="property-grid" id="rentalGrid"></div>
+    </section>
+  </main>
+
+  <div class="detail-overlay" id="detailOverlay"><div class="detail-modal" id="detailContent"></div></div>
+
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-modal">
+      <h3 id="formTitle">會員登入</h3>
+      <p class="subtitle" id="formSubtitle">登入後查看完整樓盤資訊</p>
+      <form id="loginForm">
+        <div class="form-group"><label>手機號碼</label><input type="tel" id="phone" placeholder="請輸入手機號碼" required></div>
+        <div class="form-group"><label>電子郵箱</label><input type="email" id="email" placeholder="請輸入郵箱" required></div>
+        <div class="form-group" id="nameGroup" style="display:none"><label>姓名</label><input type="text" id="name" placeholder="請輸入姓名"></div>
+        <div class="form-group" id="districtGroup" style="display:none">
+          <label>偏好地區</label>
+          <select id="district">
+            <option value="">請選擇偏好地區</option>
+            <option value="九龍城">九龍城</option><option value="啟德">啟德</option><option value="油尖旺">油尖旺</option><option value="將軍澳">將軍澳</option><option value="沙田">沙田</option><option value="何文田">何文田</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">登入</button>
+      </form>
+      <p class="toggle-link" id="toggleText">仲未成為會員？<a id="toggleLink">立即註冊</a></p>
+    </div>
+  </div>
+
+  <!-- 桌面版通知 Toast -->
+  <div class="desktop-toast" id="desktopToast">
+    <span class="toast-icon">🔔</span>
+    <span class="toast-text"></span>
+    <button class="toast-close" id="toastClose">✕</button>
+  </div>
+
+  <footer class="footer"><p>© 2025 美聯物業. All rights reserved. 僅供 Demo 演示使用</p></footer>
+
+  <script src="data.js"></script>
+  <script src="website.js"></script>
+</body>
+</html>

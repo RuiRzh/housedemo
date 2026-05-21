@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>美聯物業</title>
+  <link rel="stylesheet" href="mobile.css">
+  <script charset="UTF-8" src="./sensorsdata.min.js"></script>
+  <script charset="UTF-8">
+  var sensors = window['sensorsDataAnalytic201505'];
+  sensors.init({
+    server_url: 'https://westkdemodatasink.sensorsdata.cn/sa?project=Retail',
+    is_track_single_page: true,
+    heatmap: {
+      clickmap: 'default',   
+      scroll_notice_map: 'default'
+    },
+    use_client_time:true,
+    send_type:'beacon',
+    show_log:true 
+  });
+  sensors.quick('autoTrack');
+  </script>
+</head>
+</head>
+<body>
+  <div class="mobile-toast" id="mobileToast"></div>
+
+  <header class="mobile-header">
+    <span class="logo">🏠 美聯物業</span>
+    <div class="header-actions"><button class="btn-icon" id="btnLoginOpen">👤</button></div>
+  </header>
+
+  <div class="mobile-search">
+    <div class="mobile-search-box">
+      <input type="text" id="mobileSearchInput" placeholder="搜尋樓盤、地區...">
+      <button id="mobileSearchBtn">搜尋</button>
+    </div>
+    <div class="mobile-suggestions"><div class="mobile-suggestions-dropdown" id="mobileSuggestionsDropdown"></div></div>
+  </div>
+
+  <div class="mobile-banner" id="mobileBannerContainer">
+    <div class="mobile-banner-dots" id="mobileBannerDots"></div>
+  </div>
+
+  <div class="tab-content" id="tab-home" style="display:block">
+    <div class="mobile-section-header"><h2>二手樓盤</h2><a href="#" class="view-all">全部 ›</a></div>
+    <div class="mobile-property-list" id="mobileSecondHandList"></div>
+    <div class="mobile-section-header"><h2>一手新盤</h2><a href="#" class="view-all">全部 ›</a></div>
+    <div class="mobile-property-list" id="mobileNewPropertyList"></div>
+    <div class="mobile-section-header"><h2>租盤精選</h2><a href="#" class="view-all">全部 ›</a></div>
+    <div class="mobile-property-list" id="mobileRentalList"></div>
+  </div>
+  <div class="tab-content" id="tab-secondhand" style="display:none"><div class="mobile-section-header"><h2>全部二手樓盤</h2></div><div class="mobile-property-list" id="mobileAllSecondHandList"></div></div>
+  <div class="tab-content" id="tab-new" style="display:none"><div class="mobile-section-header"><h2>全部一手新盤</h2></div><div class="mobile-property-list" id="mobileAllNewList"></div></div>
+  <div class="tab-content" id="tab-rental" style="display:none"><div class="mobile-section-header"><h2>全部租盤</h2></div><div class="mobile-property-list" id="mobileAllRentalList"></div></div>
+  <div class="tab-content" id="tab-me" style="display:none; padding: 40px 24px; text-align: center;">
+    <div style="font-size:48px; margin-bottom:12px;">👤</div>
+    <h3 id="mobileUserName" style="margin-bottom:8px;">未登入</h3>
+    <p style="color:#999; font-size:14px; margin-bottom:24px;">登入後可查看專屬推薦</p>
+    <button style="padding:12px 32px; background:#c0392b; color:#fff; border:none; border-radius:24px; font-size:15px;" onclick="document.getElementById('mobileLoginOverlay').classList.add('show')">登入 / 註冊</button>
+  </div>
+
+  <nav class="mobile-tabbar">
+    <button class="tab-item active" data-tab="home"><span class="tab-icon">🏠</span>首頁</button>
+    <button class="tab-item" data-tab="secondhand"><span class="tab-icon">🏘️</span>二手</button>
+    <button class="tab-item" data-tab="new"><span class="tab-icon">🏗️</span>新樓</button>
+    <button class="tab-item" data-tab="rental"><span class="tab-icon">🔑</span>租盤</button>
+    <button class="tab-item" data-tab="me"><span class="tab-icon">👤</span>我的</button>
+  </nav>
+
+  <div class="mobile-detail-overlay" id="mobileDetailOverlay">
+    <div class="detail-header">
+      <button class="btn-back" id="btnDetailBack">←</button>
+      <h3 id="mobileDetailTitle">樓盤詳情</h3>
+    </div>
+    <div id="mobileDetailContent"></div>
+  </div>
+
+  <div class="mobile-login-overlay" id="mobileLoginOverlay">
+    <div class="login-header">
+      <button class="btn-back" id="btnLoginBack">←</button>
+      <h3>帳戶</h3>
+    </div>
+    <div class="login-body">
+      <h2 id="mobileFormTitle">會員登入</h2>
+      <p class="subtitle" id="mobileFormSubtitle">登入後查看完整樓盤資訊</p>
+      <form id="mobileLoginForm">
+        <div class="form-group"><label>手機號碼</label><input type="tel" id="mobilePhone" placeholder="請輸入手機號碼" required></div>
+        <div class="form-group"><label>電子郵箱</label><input type="email" id="mobileEmail" placeholder="請輸入郵箱" required></div>
+        <div class="form-group" id="mobileNameGroup" style="display:none"><label>姓名</label><input type="text" id="mobileName" placeholder="請輸入姓名"></div>
+        <div class="form-group" id="mobileDistrictGroup" style="display:none">
+          <label>偏好地區</label>
+          <select id="mobileDistrict">
+            <option value="">請選擇偏好地區</option>
+            <option value="九龍城">九龍城</option><option value="啟德">啟德</option><option value="油尖旺">油尖旺</option><option value="將軍澳">將軍澳</option><option value="沙田">沙田</option><option value="何文田">何文田</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit" id="mobileSubmitBtn">登入</button>
+      </form>
+      <p class="toggle-link" id="mobileToggleText">仲未成為會員？<a id="mobileToggleLink">立即註冊</a></p>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="mobile.js"></script>
+</body>
+</html>

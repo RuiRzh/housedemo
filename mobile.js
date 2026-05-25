@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const p = propertyData.find(p=>p.id===id); if (!p) return;
 
     const category = (p.type === 'second-hand' || p.type === 'new') ? 'buy' : 'rent';
-    sensors.track('house_listing_view', { category: category });
+    sensors.track('house_listing_view', { category: category,district: p.district});
 
     const price = p.type==='rental' ? `HK$${(p.price*10000).toLocaleString()} /月` : `HK$${p.price}萬`;
     detailTitle.textContent = p.title;

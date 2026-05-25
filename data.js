@@ -66,7 +66,7 @@ let bannerDataReadyFlag = false;   // 就緒標誌
 
 // ==================== 神策 API 配置（請替換為真實值） ====================
 const SENSORS_CONFIG = {
-  baseURL: 'https://xijiulongpocnew.sfo-tx-trial-01.saas.sensorsdata.cn/api/v2/sfo/section/recommend',
+  baseURL: 'http://xijiulongpocnew.sfo-tx-trial-01.saas.sensorsdata.cn/api/v2/sfo/section/recommend',
   org_id: 'xijiulongpocnew',
   access_token: 'd01e7c4e-692e-42cd-ba1f-8f8ed1bdc9c2',
   project_name: 'Retail',
@@ -220,7 +220,7 @@ const propertyData = [
     title: '朝陽花園 3房2廳',
     district: '九龍城',
     price: 580,
-    area: 120,
+    area: 650,
     rooms: 3,
     halls: 2,
     image: 'https://picsum.photos/seed/prop1/400/300',
@@ -233,7 +233,7 @@ const propertyData = [
     title: '星河灣 4房2廳',
     district: '啟德',
     price: 920,
-    area: 150,
+    area: 1200,
     rooms: 4,
     halls: 2,
     image: 'https://picsum.photos/seed/prop2/400/300',
@@ -246,7 +246,7 @@ const propertyData = [
     title: '陽光公寓 1房1廳',
     district: '油尖旺',
     price: 0.35,
-    area: 45,
+    area: 220,
     rooms: 1,
     halls: 1,
     image: 'https://picsum.photos/seed/prop3/400/300',
@@ -259,7 +259,7 @@ const propertyData = [
     title: '翠苑新村 2房1廳',
     district: '將軍澳',
     price: 420,
-    area: 88,
+    area: 400,
     rooms: 2,
     halls: 1,
     image: 'https://picsum.photos/seed/prop4/400/300',
@@ -272,7 +272,7 @@ const propertyData = [
     title: '龍湖天街 3房2廳',
     district: '何文田',
     price: 780,
-    area: 135,
+    area: 550,
     rooms: 3,
     halls: 2,
     image: 'https://picsum.photos/seed/prop5/400/300',
@@ -285,7 +285,7 @@ const propertyData = [
     title: '青年公寓 Studio',
     district: '沙田',
     price: 0.25,
-    area: 30,
+    area: 150,
     rooms: 0,
     halls: 1,
     image: 'https://picsum.photos/seed/prop6/400/300',
@@ -299,6 +299,8 @@ let currentUser = null;
 const registeredUsers = [
   { phone: 'test1', email: 'test1@t.cn', name: 'test1', district: '九龍城', password: '123456' },
   { phone: 'test2', email: 'test2@t.cn', name: 'test2', district: '九龍城', password: '123456' },
+  { phone: 'test3', email: 'test3@t.cn', name: 'test3', district: '九龍城', password: '123456' },
+  { phone: 'test4', email: 'test4@t.cn', name: 'test5', district: '九龍城', password: '123456' },
 ];
 
 // ==================== Demo 推廣消息 ====================

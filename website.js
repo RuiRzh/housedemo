@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!p) return;
 
     const category = (p.type === 'second-hand' || p.type === 'new') ? 'buy' : 'rent';
-    sensors.track('house_listing_view', { category: category });
+    sensors.track('house_listing_view', { category: category,district: p.district});
 
     const priceText = p.type === 'rental' ? `HK$${(p.price * 10000).toLocaleString()} /月` : `HK$${p.price}萬`;
     const typeMap = { 'second-hand': '二手', 'new': '新樓', 'rental': '租盤' };

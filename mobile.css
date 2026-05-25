@@ -7,7 +7,7 @@ body {
 }
 
 /* 頂部 Header */
-.mobile-header { position: sticky; top: 0; z-index: 100; background: #c0392b; color: #fff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.mobile-header { position: sticky; top: 0; z-index: 100; background: #e67e22; color: #fff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
 .mobile-header .logo { font-size: 18px; font-weight: 700; }
 .mobile-header .header-actions { display: flex; gap: 12px; }
 .mobile-header .btn-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: #fff; font-size: 16px; cursor: pointer; }
@@ -16,12 +16,12 @@ body {
 .mobile-search { padding: 12px 16px; background: #fff; border-bottom: 1px solid #eee; }
 .mobile-search-box { display: flex; background: #f5f5f5; border-radius: 20px; overflow: hidden; }
 .mobile-search-box input { flex: 1; padding: 10px 16px; border: none; outline: none; font-size: 14px; background: transparent; }
-.mobile-search-box button { padding: 10px 16px; background: #c0392b; color: #fff; border: none; font-size: 14px; }
+.mobile-search-box button { padding: 10px 16px; background: #e67e22; color: #fff; border: none; font-size: 14px; }
 .mobile-suggestions { position: relative; }
 .mobile-suggestions-dropdown { position: absolute; top: 8px; left: 0; right: 0; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); display: none; z-index: 100; overflow: hidden; }
 .mobile-suggestions-dropdown.show { display: block; }
 .mobile-suggestions-dropdown .suggestion-item { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid #f0f0f0; cursor: pointer; }
-.mobile-suggestions-dropdown .suggestion-item:active { background: #fdf2f2; }
+.mobile-suggestions-dropdown .suggestion-item:active { background: #fef9e7; }
 
 /* Banner */
 .mobile-banner { margin: 12px 16px; border-radius: 12px; overflow: hidden; position: relative; height: 180px; }
@@ -29,7 +29,7 @@ body {
 .mobile-banner-slide.active { opacity: 1; }
 .mobile-banner-slide img { width: 100%; height: 100%; object-fit: cover; }
 .mobile-banner-tag { position: absolute; top: 8px; left: 8px; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; color: #fff; }
-.mobile-banner-tag.sale { background: #e74c3c; }
+.mobile-banner-tag.sale { background: #f1c40f; }
 .mobile-banner-tag.rent { background: #2980b9; }
 .mobile-banner-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 16px 12px; background: linear-gradient(transparent, rgba(0,0,0,0.6)); color: #fff; }
 .mobile-banner-caption h3 { font-size: 16px; }
@@ -41,7 +41,7 @@ body {
 /* 板塊標題 */
 .mobile-section-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 16px 8px; }
 .mobile-section-header h2 { font-size: 17px; font-weight: 600; }
-.mobile-section-header .view-all { color: #c0392b; font-size: 13px; text-decoration: none; }
+.mobile-section-header .view-all { color: #e67e22; font-size: 13px; text-decoration: none; }
 
 /* 樓盤列表 */
 .mobile-property-list { padding: 0 16px; }
@@ -49,18 +49,18 @@ body {
 .mobile-property-card:active { background: #fafafa; }
 .mobile-property-card .card-image { width: 140px; flex-shrink: 0; position: relative; }
 .mobile-property-card .card-image img { width: 100%; height: 100%; object-fit: cover; }
-.mobile-property-card .card-tag { position: absolute; top: 8px; left: 8px; padding: 2px 8px; background: rgba(192,57,43,0.85); color: #fff; font-size: 10px; border-radius: 3px; }
+.mobile-property-card .card-tag { position: absolute; top: 8px; left: 8px; padding: 2px 8px; background: rgba(230,126,34,0.85); color: #fff; font-size: 10px; border-radius: 3px; }
 .mobile-property-card .card-body { flex: 1; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; }
 .mobile-property-card .card-body h4 { font-size: 15px; font-weight: 600; color: #222; }
 .mobile-property-card .card-body .card-meta { font-size: 12px; color: #999; }
-.mobile-property-card .card-body .card-price { font-size: 18px; font-weight: 700; color: #c0392b; }
+.mobile-property-card .card-body .card-price { font-size: 18px; font-weight: 700; color: #e67e22; }
 .mobile-property-card .card-body .card-price .unit { font-size: 11px; font-weight: 400; color: #999; }
 
 /* 底部 TabBar */
 .mobile-tabbar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; background: #fff; display: flex; border-top: 1px solid #eee; z-index: 1000; box-shadow: 0 -2px 8px rgba(0,0,0,0.05); }
 .tab-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px 0 6px; color: #999; text-decoration: none; font-size: 10px; cursor: pointer; border: none; background: none; }
 .tab-item .tab-icon { font-size: 20px; margin-bottom: 2px; }
-.tab-item.active { color: #c0392b; }
+.tab-item.active { color: #e67e22; }
 
 /* 詳情頁 */
 .mobile-detail-overlay { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; height: 100%; background: #fff; z-index: 2000; overflow-y: auto; display: none; }
@@ -71,11 +71,11 @@ body {
 .mobile-detail-overlay .detail-image img { width: 100%; height: 240px; object-fit: cover; }
 .mobile-detail-overlay .detail-body { padding: 16px; }
 .mobile-detail-overlay .detail-body h2 { font-size: 20px; margin-bottom: 8px; }
-.mobile-detail-overlay .detail-body .price { font-size: 26px; font-weight: 700; color: #c0392b; margin-bottom: 12px; }
+.mobile-detail-overlay .detail-body .price { font-size: 26px; font-weight: 700; color: #e67e22; margin-bottom: 12px; }
 .mobile-detail-overlay .detail-body .meta-row { display: flex; gap: 8px; margin-bottom: 16px; }
 .mobile-detail-overlay .detail-body .meta-tag { padding: 6px 12px; background: #f5f5f5; border-radius: 20px; font-size: 13px; color: #666; }
 .mobile-detail-overlay .detail-body .description { color: #666; line-height: 1.8; font-size: 14px; margin-bottom: 20px; }
-.mobile-detail-overlay .detail-body .btn-contact { display: block; width: 100%; padding: 14px; background: #c0392b; color: #fff; border: none; border-radius: 24px; font-size: 16px; position: sticky; bottom: 16px; }
+.mobile-detail-overlay .detail-body .btn-contact { display: block; width: 100%; padding: 14px; background: #e67e22; color: #fff; border: none; border-radius: 24px; font-size: 16px; position: sticky; bottom: 16px; }
 
 /* 登入頁 */
 .mobile-login-overlay { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; height: 100%; background: #fff; z-index: 3000; overflow-y: auto; display: none; }
@@ -87,10 +87,10 @@ body {
 .mobile-login-overlay .form-group { margin-bottom: 16px; }
 .mobile-login-overlay .form-group label { display: block; font-size: 13px; color: #666; margin-bottom: 6px; }
 .mobile-login-overlay .form-group input, .mobile-login-overlay .form-group select { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; outline: none; -webkit-appearance: none; }
-.mobile-login-overlay .form-group input:focus, .mobile-login-overlay .form-group select:focus { border-color: #c0392b; }
-.mobile-login-overlay .btn-submit { width: 100%; padding: 14px; background: #c0392b; color: #fff; border: none; border-radius: 24px; font-size: 16px; margin-top: 8px; }
+.mobile-login-overlay .form-group input:focus, .mobile-login-overlay .form-group select:focus { border-color: #e67e22; }
+.mobile-login-overlay .btn-submit { width: 100%; padding: 14px; background: #e67e22; color: #fff; border: none; border-radius: 24px; font-size: 16px; margin-top: 8px; }
 .mobile-login-overlay .toggle-link { text-align: center; margin-top: 20px; font-size: 13px; color: #999; }
-.mobile-login-overlay .toggle-link a { color: #c0392b; cursor: pointer; }
+.mobile-login-overlay .toggle-link a { color: #e67e22; cursor: pointer; }
 
 /* Toast */
 .mobile-toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 14px; z-index: 9999; display: none; }

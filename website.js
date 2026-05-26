@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ? '<button class="btn-contact" onclick="alert(\'已通知業主，稍後將有客服聯絡您！\')">📞 聯絡業主 / 預約睇樓</button>'
           : '<button class="btn-contact" onclick="alert(\'請先登入\'); document.getElementById(\'detailOverlay\').classList.remove(\'show\'); document.getElementById(\'loginOverlay\').classList.add(\'show\')">🔒 登入後聯絡業主</button>'
         }
+        <button class="btn-contact" style="margin-top:8px; background:#2980b9;" onclick="sensors.track('ContactAgent', {district: '${p.district}'}); alert('已通知Agent，稍後會回覆您！')">🤝 聯絡 Agent</button>
       </div>`;
     detailOverlay.classList.add('show');
   }

@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="meta-row"><span class="meta-tag">${p.rooms}房${p.halls}廳</span><span class="meta-tag">${p.area}呎</span><span class="meta-tag">${p.district}</span><span class="meta-tag">${typeMap[p.type]}</span></div>
       <p class="description">${p.description}</p>
       ${currentUser ? '<button class="btn-contact" onclick="alert(\'已通知業主，稍後將有客服聯絡您！\')">📞 聯絡業主 / 預約睇樓</button>' : '<button class="btn-contact" onclick="alert(\'請先登入\'); document.getElementById(\'mobileDetailOverlay\').classList.remove(\'show\'); document.getElementById(\'mobileLoginOverlay\').classList.add(\'show\')">🔒 登入後聯絡業主</button>'}
+      <button class="btn-contact" style="margin-top:8px; background:#2980b9;" onclick="sensors.track('ContactAgent', {district: '${p.district}'}); alert('已通知Agent，稍後會回覆您！')">🤝 聯絡 Agent</button>
       </div>`;
     detailOverlay.classList.add('show'); document.body.style.overflow='hidden';
   }

@@ -66,7 +66,7 @@ let bannerDataReadyFlag = false;   // 就緒標誌
 
 // ==================== 神策 API 配置（請替換為真實值） ====================
 const SENSORS_CONFIG = {
-  baseURL: 'http://xijiulongpocnew.sfo-tx-trial-01.saas.sensorsdata.cn/api/v2/sfo/section/recommend',
+  baseURL: 'https://xijiulongpocnew.sfo-tx-trial-01.saas.sensorsdata.cn/api/v2/sfo/section/recommend',
   org_id: 'xijiulongpocnew',
   access_token: 'd01e7c4e-692e-42cd-ba1f-8f8ed1bdc9c2',
   project_name: 'Retail',
